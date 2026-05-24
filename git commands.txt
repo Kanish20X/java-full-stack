@@ -1,0 +1,123 @@
+git is a version control system which is used to track the changes of the code(FEATURES).
+
+             git							GitHub
+>it is a software				>git hub is a service
+>it is installed locally in			>it is hosted in web
+  computer system
+>it is a command line tool 			>it provides a graphical interface
+>it is a tool used to manage			>it is a virtual storage to upload a 
+  different versions of edits of 		  copy of the git respository
+  files which are in git repositories		
+>it is free andf open source			>it is free or paid membership
+
+
+	FEATURES OF GIT..
+1. free and open source(individual programmers can request for changes in a project).
+2. track the changes of the code.
+3. collaboration.
+4. speed and performance.
+
+  	FEATURES OF GITHUB
+1. cloud storage of the code.
+2. collaboration.
+3. gui.(user friendly interface).
+4. command line(terminal).
+
+	PRE REQUIREMENTS OF CONFIGURING GIT
+for windows--> vscode and git bash
+for mac--> only git
+it is verify by using -v to check git is installed or not
+
+	CONFIGURING GIT
+1. local
+2. global
+    git config --global user.name "Kanish20x".
+    git config --global user.email"bhaskarsfpl@gmail.com"
+    git config --list(to cross verify their
+ username and  email)
+ 3. In readme file we use html tags to format the text
+	-<br> to break the line.
+	-<b> to make the text bold.
+	-<i> to make the text italic.
+
+
+    	GIT  COMMANDS..
+
+1. git --version/git -v --> (this command is to know the version of the installed git bash)
+repositories--> this are just like simple folder(VIRTUAL TEMPORARY STORAGE) for our projects in git to track all the modifications and updates for our project..
+
+2. clone --> to copy the repo/file from GitHub remote to local(GitHub desktop)
+	command: git clone <url of repo>
+
+3. status -> command: get status
+	-untracked
+	-modified
+	-unmodified
+	-staged
+4. Add
+   	command : git add <filename/directories>
+	ex: git add \.index.html
+	Add is in between 
+	untracked ->|Add| ->commit
+
+5. Commit
+	-commit is used to finalize the changes
+	-command: git commit -m "<your commit msg>"
+
+6. Push
+	-command-> git push origin main
+
+7. Pull
+	-git pull <remote_name> <branch_name>:  Fetches changes from a remote repository and merges them into the current branch. 
+
+8. git show <commit_id>: Displays the details of a specific commit. 
+
+9. git blame <file_name>: Shows who last modified each line of a file. 
+
+10. git branch  (to check branch):
+~~~~~~~~~~~~~~~~~~
+
+git branch -M main (to rename branch)
+
+git checkout -b <-branch name-> (to create new branch)
+
+git branch -d <- branch name-> (to delete branch)
+
+11. Merging code:
+~~~~~~~~~~~~~~~~~~~`
+ way1:
+--- git diff  <-branch name->  (to compare commits, branches, files and more)
+---git merge <-branch name-> (to merge 2 branches)
+
+way2:  
+create a pr:
+Pull request (it lets you tell others about changes you've pushed to a branch in a repository on GitHub.
+
+pull command:
+the pull request changes are updated in remote GitHub .but not in local system
+so git pull origin main
+used to fetch and download content from a remote repo and immediately update the local to match the content..
+Resloving Merge conflicts:
+
+An Event that takes place when git is unable to automatically resolve differences in code between two commits.
+
+Undoing changes:
+~~~~~~~~~~~
+case 1: staged changes
+	git reset <-file name->
+	git reset
+case 2: Commited changes(for one commit)
+	git reset Head~1
+case 3: Commited changes(for many commits)
+	git reset<- commit hash->
+	git reset --hard<-commit hash->
+
+git log (check previous commits)
+
+Fork:
+~~~
+Afork is a new repository that shares code and visibility settings with the original "upstream" respository.
+Fork is a rough copy
+
+
+

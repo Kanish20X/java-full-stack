@@ -1,0 +1,123 @@
+data types:
+===========
+INT,VARCHAR(size up to 100 characters).
+ENUM: A String object with a value chosen from a list of permitted values.eg.gender,weekdays. ENUM('Male','Female','others');
+DATE: Stores date values .eg date_of_birth DATE;
+TIMESTAMP : Store date and time,automatically set to the current timestamp when a row is created.
+
+constraints:
+=============
+AUTO_INCREMENT:  Automatically generates a unique number for each row.
+
+PRIMARY KEY: Uniquely identifies each row in the table.
+
+NOT NULL: Ensures a column cannot have a Null value.
+
+UNIQUE:Ensures all values in a column are different.
+
+DEFAULT: Sets a default value for a column if no value is provided eg.
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,is_active BOOLEAN DEFAULT TRUE.
+
+
+
+
+selecting from a table:
+=========================
+1---> Select * from table_name;
+2---> select column1,column 2,...column from table_name;
+
+rename a table:
+==================
+RENAME TABLE previous_name to new_table_name;
+
+Altering a table:
+================
+
+...add a column:
+================
+
+alter table table_name add column column_name(constraints);
+
+...drop a column:
+-----------------
+alter table table_name drop coloumn column_name;
+
+
+...modify a column type:
+---------------------------
+alter table table_name modify column_name (datatype);
+
+
+...moving columns to after any column positions:
+------------------------------------------------
+alter table table_name modify column column_name(datatype if not a int) after first_column;
+
+
+...moving columns to first position:
+-------------------------------------
+alter table table_name modify column(datatype) first;
+
+
+
+INSERTING DATA:(CRUD-CREATE,READ,UPDATE,DELETE)
+===============================================
+
+insert without specifying column names.
+-----------------------------------------
+INSERT into users values( value1,value2...value n);
+
+
+ insert with specifying column names.
+-------------------------------------
+INSERT INTO USERS(COLUMN NAMES) VALUES(value1,value2...value n);
+
+
+INSERTING MULTIPLE VALUES....
+-----------------------------
+INSERET INTO USERS(COLUMN NAMES) VALUE1,vqlue2,...,value n
+--this is more efficient then inserting row by row
+
+--we can bring back our old queries from saved files...just by simply adding a mini query to it
+
+[create database if not exist database_name;]
+
+
+Quering data
+------------
+where caluse is used to select particular criteria of members.
+-----
+
+(is null,is not null )-used to identify few columns ...which are either empty or filled.
+-----------------------
+
+(between , and )- used to identify in between data lies under constraints.
+----------------
+
+in -used to find the column in between two selected values.
+---
+
+and,or - used as an special add up for where caluse.
+-------
+ex -where condition and,or condition..
+
+order by clause is used to get the data in any particular order..
+---------------
+ex where condition order by column name asc/desc. limit(value) special add to it to get finite number of data.
+
+
+
+updating the data:
+==================
+
+
+
+
+
+
+
+
+
+
+
+
+

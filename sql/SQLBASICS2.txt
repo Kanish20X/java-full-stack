@@ -1,0 +1,228 @@
+
+	DATATYPES
+	~~~~~~~~~
+INT,VARCHAR(size up to 100 characters).
+ENUM: A String object with a value chosen from a list of permitted .
+ENUM('Male', 'Female', 'Others');
+DATE: Stores date values .eg date _of _birth DATE;
+TIMESTAMP : Store date and time, automatically  set to the current timestamp when a row is created.
+
+		TYPES OF COMMANDS:
+	~~~~~~~~~~~~~~~~~~~~~~
+DDL( DATA DEFINATION LANGUAGE): CREATE,ALTER,REANME,TRUNCATE AND DROP.
+DQL(DATA QUERY LANGUAGE): SELECT
+DML(DATA MANIPULATION LANGUAGE) : INSERT ,UPDATE AND DELETE.
+DCL(DATA CONTROL LANGUAGE): GRANT &REVOKE PERMISSION TO USERS
+TCL(TRANSACTION CONTROL LANGUAGE): START TRANSCATION,COMMIT,ROLLBACK ETC...
+
+DATABASE RELATED QUERIES.....
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Creating data base:
+ COMMAND  CREATE DATABASE DATABASE_NAME;
+
+dropping(deleting database)
+	COMMAND : DROP DATABASE DATABASE_NAME;
+
+TO USE THE DATA BASE :
+
+ SIMPLY USE DATABASE_NAME;
+
+SHOW DATABASES;
+
+	TABLE RELATED QUERIES...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CREATING A TABLE:
+
+ CREATE TABLE TABLE_NAME(
+column-1 datatype constraint
+column-2 datatype constraint
+column -3 datatype constraint...)
+Unsigned and signed datatypes as well
+
+DROP TABLE TABLE_NAME;
+
+To print  all data from a table :
+ SELECT * FROM TABLE_NAME;
+
+INSERTING DATA INTO TABLES..
+	insert into Table_Name (Column_names) values((value set1),(valueset2.)...);
+
+KEYS:
+~~~~~~~~~~~~ 
+1. Primary key : it is a column in a table that uniquely identifies each row.(an unique id).
+-- only one pk and that should not be null
+
+2. foreign key: A foreign ley is a column or set of columns in a table that refers to the primary key of an other table.
+-- there can be multiple fks.
+-- foreign can have duplicate and null values.
+
+	CONSTRAINTS:
+	~~~~~~~~~~~~~
+SQL CONSTRAINTS ARE USED TO SPECIFY THE RULES OF DATA IN A TABLE.
+
+*NOT NULL : COLUMN CANNOT HAVE A NULL VALUE
+*UNIQUE : ALL VALUES MUST BE DIFFERENT 
+*PRIMARY KEY: UNIQUE AND NOT NULL.
+*FOREIGN KEY : PREVENT ACTIONS THAT WOULD DESTROY LINKS BETWWEEN TABLES
+	EX: CREATE TABLE TEMP(
+			CUST_ID INT,
+		FOREIGN KEY(CUST-ID) REFERENCES CUSTOMER(ID));
+	FROM THE ABOVE EXAMPLE WE CAN SEE THAT THERE IS AN COUSTMER TABLE WITH ID AS PRIMARY KEY SO THAT THE CUST_ID WILL BE FOREIGN 
+KEY FOR THE TABLE TEMP...WHICH REFERENCE FROM COUSTOMER TABLE..
+
+*DEFAULT : WE CAN ASSIGN DEFAULT VALUES AS WELL...
+EX COLUMN NAME DATA TYPE  DEFAULT VALUE(BASED ON THE DATATYPE)
+
+* CHECK CONSTRAINT: IT CAN LIMIT THE VALUES ALLOWED IN A COLUMN
+
+ex:CREATE TABLE CITY(
+id int primary key,
+city varchar(50) not null,
+age int ,
+constraint check_age check(age>=18 and city = "Delhi"));
+
+ if we try to add something like data with age less then 18 or city other then delhi ...check constraint is violated and data is not added to table...
+
+where clause...
+~~~~~~~~~~
+-- distinct keyword ...usgae
+select DISTINCT city from city;
+-- where caluse(conditional query)
+select city age from city where age >=19;
+
+operators:
+~~~~~~~~~~~~~
+Arithmetic : +,-,*,/,%.
+comparison operators: =.,!=,<=,>=,<,>.
+logical operator: And, Or ,not ,in ,between, like ,any, all.
+Bitwise operators: &,|...
+ex:  
+select city ,age from city where age >=19;
+select city ,age from city where age >18 AND city="Delhi";
+select city age from city where age >=19 or city="Delhi";
+select city from city where age between 19 and 22;
+select age from city where city in ("Delhi","mumbai");
+select age from city where city not in ("Delhi","mumbai");
+
+Limit clause:
+~~~~~~~~~~~`
+Sets an upper limit on number of (tuples) rows to be returned..
+
+Order by clause:
+~~~~~~~~~~~~~~~
+(asc or desc order )...
+
+Aggregate function:
+~~~~~~~~~~~
+count(),max(),min(),avg(),sum()
+select Ag_fun(colum) from table_name;
+
+Group by Clause:
+~~~~~~~~~~
+group the similar record in to one unit so we can find how many of such similar records available..in the table.
+
+Having Clause:
+~~~~~~~~~
+similar to where ,we add conditions on row and columns.. similarly we use have clause to add conditions on grouping data.
+
+General order:
+~~~~~~~~~~
+Select columns
+from table_name
+where condition
+group by columns
+having condition
+order by columns asc
+
+Table related queries:
+~~~~~~~~~~~~
+update the existing rows 
+set column name = value where a condition satisifies
+delete : delete existing rows
+
+
+disable safe mode
+set SQL_SAFE_UPDATES=0;
+
+The SELECT TOP clause is used to specify the number of records to return.
+
+The SELECT TOP clause is useful on large tables with thousands of records. Returning a large number of records can impact performance.
+
+Foreign key:
+~~~~~~~
+syntax:  FOREIGN key(column) REFERENCES table_name(column)
+
+Cascading for fk
+~~~~~~~~~
+on delete cascade : When we create a foreign key using the option, it deletes the referencing rows in the child table when the refrenced row is deleted in the parent table which has primary key.
+
+on update cascade: when we create a foreign key using update cascade the referencing rows are updated in the child table when the referenced row is updated in the parent table which has a primary key.
+
+Alter (to change the schema):
+~~~~~~~~~~~~~~~~
+add a column ,
+drop a column ,
+ rename a table,
+change column,
+modify column(datatype,constraints)
+
+Truncate:
+~~~~~~~
+Truncate table query(to delete tables data)
+
+Joins in sql:
+~~~~~~~
+join is used to combine rows from two or more tables, based on a related columns between them.
+* inner join:
+ 		it returns records that have matching values in both tables.
+		syn: select columns from table a inner join tableb on tablea.column = table b.column
+
+*left join:
+		Returns all records from the left table,and the matched records from the right table.
+		syn: Select columns(s) from tableA left join tableB on tableA.col= tableB.col;
+
+* Right join -----outerJoin()
+		returns all records from the right table,and the matched records from the left table.
+		Syn: select columns(s) from tableA right join tableB on tableA.col=tableB.col
+* full join....
+
+Self join:
+	It is a regular join but the table is joined with itself..
+	syn:  select column from table as a join table as b on a.col.1=b.col.2;
+
+Union:
+~~~~~~
+It is used to combine the result-set of two or more select statments.
+Gives unique records
+rules:
+* same no of columns for both the tables
+*columns must have similar datatypes
+*columns in every select should be in same order
+
+Syn:
+select columns from tablea union select columns from tableb.
+replace with union all to get duplicate ,repeated  values as well
+
+SQL SUB QUERIES:
+~~~~~~~~~~~~~
+A Subquery or inner query or a nested query is a query within another sql query.
+it invoves 2 select statements
+Syn:
+select columns(s)
+from table_name 
+where col_name operator (subquery);
+
+SQL VIEWS:
+~~~~~~~~
+aVIEW ALWAYS SHOWS UP-TO-DATE DATA. THE database engine recreates the view,everytime a user queries it.
+syn:
+create view view1 as select colum from table
+select * from view1;
+	
+	
+
+
+
+

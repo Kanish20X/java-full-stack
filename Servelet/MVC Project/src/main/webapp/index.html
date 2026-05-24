@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px 5px;
+            text-align: left;
+            color: #7f8c8d;
+            font-size: 15px;
+        }
+        td:first-child {
+            width: 35%;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Kindly Register to proceed further!</h2>
+
+    <form action="register" method="Post">
+        <table>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="uname" required></td>
+            </tr>
+            <tr>
+                <td>User email</td>
+                <td><input type="email" name="uemail" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="upass" required></td>
+            </tr>
+            <tr>
+                <td>User City</td>
+                <td><input type="text" name="ucity" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register1"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

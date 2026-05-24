@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a93cf863-f020-4930-acb6-ec30ce4a74a3" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DkihwTN0qAS3NKXy0kwIh3IslC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Delete.executor": "Run",
+    "Application.ExecuteAll.executor": "Run",
+    "Application.Insert.executor": "Run",
+    "Application.LaunchApp1.executor": "Run",
+    "Application.LaunchApp2.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PrepareStatement.executor": "Run",
+    "Application.Retrive.executor": "Run",
+    "Application.update.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/satya/Downloads/pc/java_full stack/Servelet",
+    "onboarding.tips.debug.path": "/home/satya/Downloads/pc/java_full stack/Jdbc/FirstjdbcApp/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.PrepareStatement">
+    <configuration name="Delete" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.satya.jdbc.Delete" />
+      <module name="FirstjdbcApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.satya.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExecuteAll" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.satya.jdbc.ExecuteAll" />
+      <module name="FirstjdbcApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.satya.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Insert" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.satya.jdbc.Insert" />
+      <module name="FirstjdbcApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.satya.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrepareStatement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.satya.jdbc.PrepareStatement" />
+      <module name="FirstjdbcApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.satya.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Retrive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.satya.jdbc.Retrive" />
+      <module name="FirstjdbcApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.satya.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PrepareStatement" />
+        <item itemvalue="Application.ExecuteAll" />
+        <item itemvalue="Application.Retrive" />
+        <item itemvalue="Application.Insert" />
+        <item itemvalue="Application.Delete" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a93cf863-f020-4930-acb6-ec30ce4a74a3" name="Changes" comment="" />
+      <created>1778832593703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778832593703</updated>
+    </task>
+    <servers />
+  </component>
+</project>

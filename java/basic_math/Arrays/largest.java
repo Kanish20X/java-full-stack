@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+class largest {
+
+    public static int largest(int arr[]) {
+        int Max_Value = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > Max_Value) {
+                Max_Value = arr[i];
+            }
+        }
+        return Max_Value;
+
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+        int max = largest(array);
+        System.out.println("Largest number from the given array: " + max);
+
+    }
+}

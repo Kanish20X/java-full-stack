@@ -1,0 +1,4 @@
+mvn archetype:generate -DgroupId=com.satya -DartifactId=satya-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.0 -DinteractiveMode=false
+
+servelets are basically used to generate dynamic responses to the client.
+- it can handle the http request and interactions with the database and genearte a dynamic response for the webbrowser.
