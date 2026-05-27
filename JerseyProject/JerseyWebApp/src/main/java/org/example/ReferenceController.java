@@ -8,17 +8,17 @@ import java.sql.*;
 @Path("aliens")
 public class ReferenceController {
 
-    private final AlienDb obj;
-
-    {
-        obj = new AlienDb();
-    }
+//    private final AlienDb obj;
+//
+//    {
+//        obj = new AlienDb();
+//    }
 
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Alien> getAlien() {
-        System.out.println("Hello!");
-        return obj.getAliens();
+//        System.out.println("Hello!");
+     return AlienDb.getAliens();
     }
 
     @GET
@@ -37,4 +37,40 @@ public class ReferenceController {
         AlienDb.create(a);
         return a;
     }
+    @PUT
+    @Path("alien")
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Alien updateAlien(Alien a) {
+
+        if(AlienDb.getAlien(a.getId()).getId()==0){
+            AlienDb.create(a);
+        }
+        else {
+            AlienDb.update(a);
+        }
+        return a;
+    }
+
+
+    @DELETE
+    @Path("alien/{id}")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public  Alien deleteAlien(@PathParam("id") int id){
+        if(AlienDb.getAlien(id).getId()==0){
+            System.out.println("there is no such record");
+        }
+
+
+
+
+        return AlienDb.deleteAlien(id);
+
+
+    }
+
+
+
+
+
 }
